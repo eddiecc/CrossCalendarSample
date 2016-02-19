@@ -34,7 +34,7 @@
                         <barButtonItem key="rightBarButtonItem" title="切り替え" id="RNa-a5-qrb"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="calendarView" destination="73R-Ux-2NK" id="6Xx-D8-jOy"/>
+                        <outlet property="calendarBaseView" destination="73R-Ux-2NK" id="dTN-Cd-l6b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

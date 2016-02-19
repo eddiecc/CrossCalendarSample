@@ -10,14 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var calendarView: UIView!
+    @IBOutlet weak var calendarBaseView: UIView!
+    var calendarView: CalendarView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidLayoutSubviews() {
-        calendarView.addSubview(CalendarView(frame: calendarView.bounds))
+        if calendarView == nil {
+            calendarView = CalendarView(frame: calendarBaseView.bounds)
+            if let calendarView = calendarView {
+                calendarBaseView.addSubview(calendarView)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
