@@ -137,7 +137,7 @@ class CalendarView: UIView, UIScrollViewDelegate {
         CalendarManager.sharedInstance.currentYear++
         let tmpView = currentMonthView
         currentMonthView = nextYearMonthView
-        nextYearMonthView = prevMonthView
+        nextYearMonthView = lastYearMonthView
         lastYearMonthView = tmpView
         
         let ret = CalendarManager.getNextYear()
@@ -161,6 +161,7 @@ class CalendarView: UIView, UIScrollViewDelegate {
     
     
     func resetContentOffSet (scrollView: UIScrollView) {
+        print(frame)
         // horizontal
         prevMonthView.frame = CGRect(origin: CGPointZero, size: frame.size)
         verticalScrollView.frame = CGRect(origin: CGPoint(x: CGRectGetWidth(frame), y: 0), size: frame.size)
@@ -174,8 +175,8 @@ class CalendarView: UIView, UIScrollViewDelegate {
         let scrollViewDelegate:UIScrollViewDelegate = scrollView.delegate!
         scrollView.delegate = nil
         //delegateを呼びたくないので
-        horizontalScrollView.contentOffset = CGPointMake(frame.size.width , 0);
-        verticalScrollView.contentOffset = CGPointMake(0 , frame.size.height);
+        horizontalScrollView.contentOffset = CGPoint(x: CGRectGetWidth(frame), y: 0)
+        verticalScrollView.contentOffset = CGPoint(x: 0, y: CGRectGetHeight(frame))
         scrollView.delegate = scrollViewDelegate
     }
 }
