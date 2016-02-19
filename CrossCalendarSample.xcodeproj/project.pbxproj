@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFE0F9BF1C772B3300F82B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE0F9BE1C772B3300F82B4D /* AppDelegate.swift */; };
+		EFE0F9C11C772B3300F82B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE0F9C01C772B3300F82B4D /* ViewController.swift */; };
+		EFE0F9C41C772B3300F82B4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE0F9C21C772B3300F82B4D /* Main.storyboard */; };
+		EFE0F9C61C772B3300F82B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE0F9C51C772B3300F82B4D /* Assets.xcassets */; };
+		EFE0F9C91C772B3300F82B4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE0F9C71C772B3300F82B4D /* LaunchScreen.storyboard */; };
+		EFE0F9D41C772B3300F82B4D /* CrossCalendarSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE0F9D31C772B3300F82B4D /* CrossCalendarSampleTests.swift */; };
+		EFE0F9DF1C772B3400F82B4D /* CrossCalendarSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE0F9DE1C772B3400F82B4D /* CrossCalendarSampleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFE0F9D01C772B3300F82B4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFE0F9B31C772B3300F82B4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFE0F9BA1C772B3300F82B4D;
+			remoteInfo = CrossCalendarSample;
+		};
+		EFE0F9DB1C772B3300F82B4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFE0F9B31C772B3300F82B4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFE0F9BA1C772B3300F82B4D;
+			remoteInfo = CrossCalendarSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EFE0F9BB1C772B3300F82B4D /* CrossCalendarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossCalendarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE0F9BE1C772B3300F82B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFE0F9C01C772B3300F82B4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFE0F9C31C772B3300F82B4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFE0F9C51C772B3300F82B4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFE0F9C81C772B3300F82B4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFE0F9CA1C772B3300F82B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFE0F9CF1C772B3300F82B4D /* CrossCalendarSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossCalendarSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE0F9D31C772B3300F82B4D /* CrossCalendarSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossCalendarSampleTests.swift; sourceTree = "<group>"; };
+		EFE0F9D51C772B3300F82B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFE0F9DA1C772B3300F82B4D /* CrossCalendarSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossCalendarSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE0F9DE1C772B3400F82B4D /* CrossCalendarSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossCalendarSampleUITests.swift; sourceTree = "<group>"; };
+		EFE0F9E01C772B3400F82B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFE0F9B81C772B3300F82B4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFE0F9CC1C772B3300F82B4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFE0F9D71C772B3300F82B4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFE0F9B21C772B3300F82B4D = {
+			isa = PBXGroup;
+			children = (
+				EFE0F9BD1C772B3300F82B4D /* CrossCalendarSample */,
+				EFE0F9D21C772B3300F82B4D /* CrossCalendarSampleTests */,
+				EFE0F9DD1C772B3300F82B4D /* CrossCalendarSampleUITests */,
+				EFE0F9BC1C772B3300F82B4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFE0F9BC1C772B3300F82B4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFE0F9BB1C772B3300F82B4D /* CrossCalendarSample.app */,
+				EFE0F9CF1C772B3300F82B4D /* CrossCalendarSampleTests.xctest */,
+				EFE0F9DA1C772B3300F82B4D /* CrossCalendarSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFE0F9BD1C772B3300F82B4D /* CrossCalendarSample */ = {
+			isa = PBXGroup;
+			children = (
+				EFE0F9BE1C772B3300F82B4D /* AppDelegate.swift */,
+				EFE0F9C01C772B3300F82B4D /* ViewController.swift */,
+				EFE0F9C21C772B3300F82B4D /* Main.storyboard */,
+				EFE0F9C51C772B3300F82B4D /* Assets.xcassets */,
+				EFE0F9C71C772B3300F82B4D /* LaunchScreen.storyboard */,
+				EFE0F9CA1C772B3300F82B4D /* Info.plist */,
+			);
+			path = CrossCalendarSample;
+			sourceTree = "<group>";
+		};
+		EFE0F9D21C772B3300F82B4D /* CrossCalendarSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFE0F9D31C772B3300F82B4D /* CrossCalendarSampleTests.swift */,
+				EFE0F9D51C772B3300F82B4D /* Info.plist */,
+			);
+			path = CrossCalendarSampleTests;
+			sourceTree = "<group>";
+		};
+		EFE0F9DD1C772B3300F82B4D /* CrossCalendarSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFE0F9DE1C772B3400F82B4D /* CrossCalendarSampleUITests.swift */,
+				EFE0F9E01C772B3400F82B4D /* Info.plist */,
+			);
+			path = CrossCalendarSampleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFE0F9BA1C772B3300F82B4D /* CrossCalendarSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFE0F9E31C772B3400F82B4D /* Build configuration list for PBXNativeTarget "CrossCalendarSample" */;
+			buildPhases = (
+				EFE0F9B71C772B3300F82B4D /* Sources */,
+				EFE0F9B81C772B3300F82B4D /* Frameworks */,
+				EFE0F9B91C772B3300F82B4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrossCalendarSample;
+			productName = CrossCalendarSample;
+			productReference = EFE0F9BB1C772B3300F82B4D /* CrossCalendarSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFE0F9CE1C772B3300F82B4D /* CrossCalendarSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFE0F9E61C772B3400F82B4D /* Build configuration list for PBXNativeTarget "CrossCalendarSampleTests" */;
+			buildPhases = (
+				EFE0F9CB1C772B3300F82B4D /* Sources */,
+				EFE0F9CC1C772B3300F82B4D /* Frameworks */,
+				EFE0F9CD1C772B3300F82B4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFE0F9D11C772B3300F82B4D /* PBXTargetDependency */,
+			);
+			name = CrossCalendarSampleTests;
+			productName = CrossCalendarSampleTests;
+			productReference = EFE0F9CF1C772B3300F82B4D /* CrossCalendarSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFE0F9D91C772B3300F82B4D /* CrossCalendarSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFE0F9E91C772B3400F82B4D /* Build configuration list for PBXNativeTarget "CrossCalendarSampleUITests" */;
+			buildPhases = (
+				EFE0F9D61C772B3300F82B4D /* Sources */,
+				EFE0F9D71C772B3300F82B4D /* Frameworks */,
+				EFE0F9D81C772B3300F82B4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFE0F9DC1C772B3300F82B4D /* PBXTargetDependency */,
+			);
+			name = CrossCalendarSampleUITests;
+			productName = CrossCalendarSampleUITests;
+			productReference = EFE0F9DA1C772B3300F82B4D /* CrossCalendarSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFE0F9B31C772B3300F82B4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Eisuke Sato";
+				TargetAttributes = {
+					EFE0F9BA1C772B3300F82B4D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					EFE0F9CE1C772B3300F82B4D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = EFE0F9BA1C772B3300F82B4D;
+					};
+					EFE0F9D91C772B3300F82B4D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = EFE0F9BA1C772B3300F82B4D;
+					};
+				};
+			};
+			buildConfigurationList = EFE0F9B61C772B3300F82B4D /* Build configuration list for PBXProject "CrossCalendarSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFE0F9B21C772B3300F82B4D;
+			productRefGroup = EFE0F9BC1C772B3300F82B4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFE0F9BA1C772B3300F82B4D /* CrossCalendarSample */,
+				EFE0F9CE1C772B3300F82B4D /* CrossCalendarSampleTests */,
+				EFE0F9D91C772B3300F82B4D /* CrossCalendarSampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFE0F9B91C772B3300F82B4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE0F9C91C772B3300F82B4D /* LaunchScreen.storyboard in Resources */,
+				EFE0F9C61C772B3300F82B4D /* Assets.xcassets in Resources */,
+				EFE0F9C41C772B3300F82B4D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFE0F9CD1C772B3300F82B4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFE0F9D81C772B3300F82B4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFE0F9B71C772B3300F82B4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE0F9C11C772B3300F82B4D /* ViewController.swift in Sources */,
+				EFE0F9BF1C772B3300F82B4D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFE0F9CB1C772B3300F82B4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE0F9D41C772B3300F82B4D /* CrossCalendarSampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFE0F9D61C772B3300F82B4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE0F9DF1C772B3400F82B4D /* CrossCalendarSampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFE0F9D11C772B3300F82B4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFE0F9BA1C772B3300F82B4D /* CrossCalendarSample */;
+			targetProxy = EFE0F9D01C772B3300F82B4D /* PBXContainerItemProxy */;
+		};
+		EFE0F9DC1C772B3300F82B4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFE0F9BA1C772B3300F82B4D /* CrossCalendarSample */;
+			targetProxy = EFE0F9DB1C772B3300F82B4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFE0F9C21C772B3300F82B4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFE0F9C31C772B3300F82B4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFE0F9C71C772B3300F82B4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFE0F9C81C772B3300F82B4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFE0F9E11C772B3400F82B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EFE0F9E21C772B3400F82B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFE0F9E41C772B3400F82B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CrossCalendarSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddie.CrossCalendarSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EFE0F9E51C772B3400F82B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CrossCalendarSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddie.CrossCalendarSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EFE0F9E71C772B3400F82B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CrossCalendarSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddie.CrossCalendarSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrossCalendarSample.app/CrossCalendarSample";
+			};
+			name = Debug;
+		};
+		EFE0F9E81C772B3400F82B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CrossCalendarSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddie.CrossCalendarSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrossCalendarSample.app/CrossCalendarSample";
+			};
+			name = Release;
+		};
+		EFE0F9EA1C772B3400F82B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CrossCalendarSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddie.CrossCalendarSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CrossCalendarSample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EFE0F9EB1C772B3400F82B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CrossCalendarSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddie.CrossCalendarSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CrossCalendarSample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFE0F9B61C772B3300F82B4D /* Build configuration list for PBXProject "CrossCalendarSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFE0F9E11C772B3400F82B4D /* Debug */,
+				EFE0F9E21C772B3400F82B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFE0F9E31C772B3400F82B4D /* Build configuration list for PBXNativeTarget "CrossCalendarSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFE0F9E41C772B3400F82B4D /* Debug */,
+				EFE0F9E51C772B3400F82B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EFE0F9E61C772B3400F82B4D /* Build configuration list for PBXNativeTarget "CrossCalendarSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFE0F9E71C772B3400F82B4D /* Debug */,
+				EFE0F9E81C772B3400F82B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EFE0F9E91C772B3400F82B4D /* Build configuration list for PBXNativeTarget "CrossCalendarSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFE0F9EA1C772B3400F82B4D /* Debug */,
+				EFE0F9EB1C772B3400F82B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFE0F9B31C772B3300F82B4D /* Project object */;
+}
