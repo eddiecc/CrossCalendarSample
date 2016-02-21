@@ -104,14 +104,8 @@ class CalendarView: UIView, UIScrollViewDelegate {
             CalendarManager.sharedInstance.currentMonth = 1;
             CalendarManager.sharedInstance.currentYear++;
         }
-        let tmpView = currentMonthView
-        currentMonthView = nextMonthView
-        nextMonthView    = prevMonthView
-        prevMonthView    = tmpView
-
-        let ret = CalendarManager.getNextYearAndMonth()
-        nextMonthView.setUpDays(ret.year, month:ret.month)
         
+        resetMonthView()
         self.resetContentOffSet(horizontalScrollView)
     }
     
@@ -122,15 +116,16 @@ class CalendarView: UIView, UIScrollViewDelegate {
             CalendarManager.sharedInstance.currentYear--
         }
 
-        let tmpView:CalendarMonthView = currentMonthView
-        currentMonthView = prevMonthView
-        prevMonthView    = nextMonthView
-        nextMonthView    = tmpView
-        let ret = CalendarManager.getPrevYearAndMonth()
-        prevMonthView.setUpDays(ret.year, month:ret.month)
-
-        //position調整
+        resetMonthView()
         self.resetContentOffSet(horizontalScrollView)
+    }
+    
+    func resetMonthView() {
+        currentMonthView.setUpDays(CalendarManager.sharedInstance.currentYear, month: CalendarManager.sharedInstance.currentMonth)
+        var ret = CalendarManager.getPrevYearAndMonth()
+        prevMonthView.setUpDays(ret.year, month: ret.month)
+        ret = CalendarManager.getNextYearAndMonth()
+        nextMonthView.setUpDays(ret.year, month:ret.month)
     }
     
     func showNextYearView (){
@@ -161,20 +156,14 @@ class CalendarView: UIView, UIScrollViewDelegate {
     
     
     func resetContentOffSet (scrollView: UIScrollView) {
-        print(frame)
-        // horizontal
-        prevMonthView.frame = CGRect(origin: CGPointZero, size: frame.size)
-        verticalScrollView.frame = CGRect(origin: CGPoint(x: CGRectGetWidth(frame), y: 0), size: frame.size)
-        nextMonthView.frame = CGRect(origin: CGPoint(x: CGRectGetWidth(frame) * 2, y: 0), size: frame.size)
-        
-        // vertical
         lastYearMonthView.frame = CGRect(origin: CGPointZero, size: frame.size)
         currentMonthView.frame = CGRect(origin: CGPoint(x: 0, y: CGRectGetHeight(frame)), size: frame.size)
         nextYearMonthView.frame = CGRect(origin: CGPoint(x: 0, y: CGRectGetHeight(frame) * 2), size: frame.size)
         
         let scrollViewDelegate:UIScrollViewDelegate = scrollView.delegate!
         scrollView.delegate = nil
-        //delegateを呼びたくないので
+        
+        // scrollViewDidScrollを呼ばないため
         horizontalScrollView.contentOffset = CGPoint(x: CGRectGetWidth(frame), y: 0)
         verticalScrollView.contentOffset = CGPoint(x: 0, y: CGRectGetHeight(frame))
         scrollView.delegate = scrollViewDelegate

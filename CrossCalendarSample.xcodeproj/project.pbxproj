@@ -506,6 +506,7 @@
 				EFE0F9E51C772B3400F82B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFE0F9E61C772B3400F82B4D /* Build configuration list for PBXNativeTarget "CrossCalendarSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +515,7 @@
 				EFE0F9E81C772B3400F82B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFE0F9E91C772B3400F82B4D /* Build configuration list for PBXNativeTarget "CrossCalendarSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +524,7 @@
 				EFE0F9EB1C772B3400F82B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

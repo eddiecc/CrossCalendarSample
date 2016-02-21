@@ -15,7 +15,7 @@ class CalendarMonthView: UIView {
     
     init(frame: CGRect, year: Int, month: Int) {
         super.init(frame:frame)
-        self.setUpDays(year,month:month)
+        setUpDays(year,month:month)
     }
 
     func setUpDays(year:Int, month:Int){
