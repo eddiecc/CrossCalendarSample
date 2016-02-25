@@ -15,6 +15,7 @@ class CalendarManager: NSObject {
     var currentYear = 0
     var currentMonth = 0
     var currentDay = 0
+    var currentWeek = 0
     
     func setCurrentDate() {
         let dateFormatter:NSDateFormatter = NSDateFormatter();
@@ -23,6 +24,7 @@ class CalendarManager: NSObject {
         var dates:[String] = dateString.componentsSeparatedByString("/")
         currentYear  = Int(dates[0])!
         currentMonth = Int(dates[1])!
+        currentWeek = Int(dates[2])!
     }
     
     //第何週の取得
@@ -90,6 +92,30 @@ class CalendarManager: NSObject {
             prev_year--
         }
         return (prev_year,prev_month)
+    }
+    
+    class func getNextWeek () -> (year: Int, month: Int, week: Int){
+        var next_year:Int = CalendarManager.sharedInstance.currentYear
+        var next_month:Int = CalendarManager.sharedInstance.currentMonth
+        var next_week:Int = CalendarManager.sharedInstance.currentWeek + 1
+        if next_week == 5{
+            next_week = 1
+            next_month++
+            next_year++
+        }
+        return (next_year,next_month,next_week)
+    }
+    
+    class func getPrevWeek () -> (year: Int, month: Int, week: Int){
+        var prev_year:Int = CalendarManager.sharedInstance.currentYear
+        var prev_month:Int = CalendarManager.sharedInstance.currentMonth
+        var prev_week:Int = CalendarManager.sharedInstance.currentWeek + 1
+        if prev_week == 0{
+            prev_week = 5
+            prev_month = 12
+            prev_year--
+        }
+        return (prev_year,prev_month,prev_week)
     }
     
     class func getNextYear () -> (year: Int, month: Int){

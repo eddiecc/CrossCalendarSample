@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED1C29C31C7D7BAC005BF836 /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C29C21C7D7BAC005BF836 /* CalendarWeekView.swift */; };
+		ED1C29C51C7DD724005BF836 /* CalendarAnotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C29C41C7DD724005BF836 /* CalendarAnotherView.swift */; };
+		ED1C29C71C7F2467005BF836 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C29C61C7F2467005BF836 /* TestViewController.swift */; };
 		EFE0F9BF1C772B3300F82B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE0F9BE1C772B3300F82B4D /* AppDelegate.swift */; };
 		EFE0F9C11C772B3300F82B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE0F9C01C772B3300F82B4D /* ViewController.swift */; };
 		EFE0F9C41C772B3300F82B4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE0F9C21C772B3300F82B4D /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED1C29C21C7D7BAC005BF836 /* CalendarWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarWeekView.swift; path = ../CalendarWeekView.swift; sourceTree = "<group>"; };
+		ED1C29C41C7DD724005BF836 /* CalendarAnotherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarAnotherView.swift; sourceTree = "<group>"; };
+		ED1C29C61C7F2467005BF836 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		EFE0F9BB1C772B3300F82B4D /* CrossCalendarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossCalendarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE0F9BE1C772B3300F82B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFE0F9C01C772B3300F82B4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 			children = (
 				EFE0F9BE1C772B3300F82B4D /* AppDelegate.swift */,
 				EFE0F9C01C772B3300F82B4D /* ViewController.swift */,
+				ED1C29C61C7F2467005BF836 /* TestViewController.swift */,
 				EFE0F9EC1C772C9500F82B4D /* Calendar */,
 				EFE0F9C21C772B3300F82B4D /* Main.storyboard */,
 				EFE0F9C51C772B3300F82B4D /* Assets.xcassets */,
@@ -139,8 +146,10 @@
 			children = (
 				EFE0F9F31C772D6000F82B4D /* CalendarManager.swift */,
 				EFE0F9ED1C772CD600F82B4D /* CalendarView.swift */,
+				ED1C29C41C7DD724005BF836 /* CalendarAnotherView.swift */,
 				EFE0F9EF1C772D0700F82B4D /* CalendarDayView.swift */,
 				EFE0F9F11C772D1500F82B4D /* CalendarMonthView.swift */,
+				ED1C29C21C7D7BAC005BF836 /* CalendarWeekView.swift */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -278,9 +287,12 @@
 			files = (
 				EFE0F9C11C772B3300F82B4D /* ViewController.swift in Sources */,
 				EFE0F9BF1C772B3300F82B4D /* AppDelegate.swift in Sources */,
+				ED1C29C51C7DD724005BF836 /* CalendarAnotherView.swift in Sources */,
+				ED1C29C31C7D7BAC005BF836 /* CalendarWeekView.swift in Sources */,
 				EFE0F9EE1C772CD600F82B4D /* CalendarView.swift in Sources */,
 				EFE0F9F41C772D6000F82B4D /* CalendarManager.swift in Sources */,
 				EFE0F9F01C772D0700F82B4D /* CalendarDayView.swift in Sources */,
+				ED1C29C71C7F2467005BF836 /* TestViewController.swift in Sources */,
 				EFE0F9F21C772D1500F82B4D /* CalendarMonthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

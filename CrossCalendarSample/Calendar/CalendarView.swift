@@ -30,6 +30,7 @@ class CalendarView: UIView, UIScrollViewDelegate {
     }
     
     func commonInit() {
+        
         print(self.frame)
         CalendarManager.sharedInstance.setCurrentDate()
         horizontalScrollView = UIScrollView(frame: frame)
