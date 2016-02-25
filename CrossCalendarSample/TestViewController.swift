@@ -27,17 +27,6 @@ class TestViewController: UIViewController {
         }
     }
     
-    //    override func viewDidLayoutSubviews() {
-    //        if calendarAnotherView == nil {
-    //            calendarAnotherView = CalendarAnotherView(frame: calendarAnotherView.bounds)
-    //            if let calendarAnotherView = calendarAnotherView {
-    //                calendarAnotherView.addSubview(calendarAnotherView)
-    //            }
-    //        }
-    //    }
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

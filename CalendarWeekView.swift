@@ -35,9 +35,7 @@ class CalendarWeekView: UIView{
         
         // dayViewをaddする
         for var i = 0; i < day; i++ {
-//            let week = CalendarManager.getWeek(year, month: month, day: i + 1)
             let x = (weekday - 1) * Int(daySize.width)
-//            let y = (week - 1) * Int(daySize.height)
             let y = Int(daySize.height)
             let frame = CGRect(origin: CGPoint(x: x, y: y), size: daySize)
             

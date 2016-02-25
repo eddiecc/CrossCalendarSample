@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var toggleWeek: Bool = true
+    var toggleWeek: Bool = false
 
     @IBOutlet weak var calendarBaseView: UIView!
     @IBOutlet weak var calendarWeekView: UIView!
@@ -26,10 +26,10 @@ class ViewController: UIViewController {
     
     //calendarBaseView表示
     override func viewDidLayoutSubviews() {
-        if calendarAnotherView == nil{
-            calendarAnotherView = CalendarAnotherView(frame: calendarWeekView.bounds)
-            if let calendarAnotherView = calendarAnotherView {
-                calendarWeekView.addSubview(calendarAnotherView)
+//        if calendarAnotherView == nil{
+//            calendarAnotherView = CalendarAnotherView(frame: calendarWeekView.bounds)
+//            if let calendarAnotherView = calendarAnotherView {
+//                calendarWeekView.addSubview(calendarAnotherView)
         
         if calendarView == nil {
             calendarView = CalendarView(frame: calendarBaseView.bounds)
@@ -43,8 +43,7 @@ class ViewController: UIViewController {
                     }
                 }
             }
-        }
-    }
+//    }
 
 //    override func viewDidLayoutSubviews() {
 //        if calendarAnotherView == nil {
@@ -82,8 +81,8 @@ class ViewController: UIViewController {
         
     }
     
-
-
-
 }
+
+
+
 

@@ -11,7 +11,6 @@ import UIKit
 class CalendarAnotherView : UIView, UIScrollViewDelegate {
     
     var horizontalScrollView: UIScrollView!
-    var verticalScrollView: UIScrollView!
     
     var currentWeekView: CalendarWeekView!
     var prevWeekView: CalendarWeekView!
@@ -38,12 +37,14 @@ class CalendarAnotherView : UIView, UIScrollViewDelegate {
         
         // horizontalにaddする
         var ret = CalendarManager.getPrevWeek()
+        currentWeekView = CalendarWeekView(frame: CGRect(origin:CGPoint (x: CGRectGetWidth(frame), y: 0), size: frame.size), year: CalendarManager.sharedInstance.currentYear, month: CalendarManager.sharedInstance.currentMonth, week: CalendarManager.sharedInstance.currentWeek)
         prevWeekView = CalendarWeekView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: frame.size), year: ret.year, month: ret.month, week: ret.week)
         ret = CalendarManager.getNextWeek()
         nextWeekView = CalendarWeekView(frame: CGRect(origin: CGPoint(x: CGRectGetWidth(frame) * 2, y: 0), size: frame.size), year: ret.year, month: ret.month, week: ret.week)
         
         self.addSubview(horizontalScrollView)
         
+        horizontalScrollView.addSubview(currentWeekView)
         horizontalScrollView.addSubview(prevWeekView)
         horizontalScrollView.addSubview(nextWeekView)
 
@@ -75,6 +76,7 @@ class CalendarAnotherView : UIView, UIScrollViewDelegate {
             
         resetWeekView()
         self.resetContentOffSet(horizontalScrollView)
+        print("showNextWeekView")
         
         }
         
@@ -87,27 +89,34 @@ class CalendarAnotherView : UIView, UIScrollViewDelegate {
             
         resetWeekView()
         self.resetContentOffSet(horizontalScrollView)
+        print("showPrevWeekView")
+        
         }
         
     func resetWeekView() {
         currentWeekView.setUpDays(CalendarManager.sharedInstance.currentYear, month: CalendarManager.sharedInstance.currentMonth, week: CalendarManager.sharedInstance.currentWeek)
+        
         var ret = CalendarManager.getPrevWeek()
         prevWeekView.setUpDays(ret.year, month: ret.month, week: ret.week)
-        ret = CalendarManager.getPrevWeek()
+        
+        ret = CalendarManager.getNextWeek()
         nextWeekView.setUpDays(ret.year, month: ret.month, week: ret.week)
+        
+        
     }
     
+    
     func resetContentOffSet (scrollView: UIScrollView) {
-        prevWeekView.frame = CGRect(origin: CGPointZero, size: frame.size)
-        currentWeekView.frame = CGRect(origin: CGPoint(x: 0, y: CGRectGetHeight(frame)), size: frame.size)
-        nextWeekView.frame = CGRect(origin: CGPoint(x: 0, y: CGRectGetHeight(frame) * 2), size: frame.size)
-            
+        print("resetContentOffSet")
+//        prevWeekView.frame = CGRect(origin: CGPointZero, size: frame.size)
+//        currentWeekView.frame = CGRect(origin: CGPoint(x: 0, y: CGRectGetHeight(frame)), size: frame.size)
+//        nextWeekView.frame = CGRect(origin: CGPoint(x: 0, y: CGRectGetHeight(frame) * 2), size: frame.size)
+        
         let scrollViewDelegate:UIScrollViewDelegate = scrollView.delegate!
         scrollView.delegate = nil
             
         // scrollViewDidScrollを呼ばないため
         horizontalScrollView.contentOffset = CGPoint(x: CGRectGetWidth(frame), y: 0)
-        verticalScrollView.contentOffset = CGPoint(x: 0, y: CGRectGetHeight(frame))
         scrollView.delegate = scrollViewDelegate
         }
 }

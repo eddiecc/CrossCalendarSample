@@ -108,6 +108,7 @@ class CalendarView: UIView, UIScrollViewDelegate {
         
         resetMonthView()
         self.resetContentOffSet(horizontalScrollView)
+        print("showNextMonthView")
     }
     
     func showPrevMonthView () {
@@ -119,12 +120,15 @@ class CalendarView: UIView, UIScrollViewDelegate {
 
         resetMonthView()
         self.resetContentOffSet(horizontalScrollView)
+        print("showPrevMonthView")
     }
     
     func resetMonthView() {
         currentMonthView.setUpDays(CalendarManager.sharedInstance.currentYear, month: CalendarManager.sharedInstance.currentMonth)
+        
         var ret = CalendarManager.getPrevYearAndMonth()
         prevMonthView.setUpDays(ret.year, month: ret.month)
+        
         ret = CalendarManager.getNextYearAndMonth()
         nextMonthView.setUpDays(ret.year, month:ret.month)
     }
@@ -148,6 +152,7 @@ class CalendarView: UIView, UIScrollViewDelegate {
         currentMonthView = lastYearMonthView
         lastYearMonthView    = nextYearMonthView
         nextYearMonthView    = tmpView
+        
         let ret = CalendarManager.getLastYear()
         lastYearMonthView.setUpDays(ret.year, month:ret.month)
         
