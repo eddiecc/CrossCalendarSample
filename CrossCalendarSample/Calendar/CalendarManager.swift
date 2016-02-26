@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftDate
+
 
 class CalendarManager: NSObject {
     
@@ -17,6 +19,41 @@ class CalendarManager: NSObject {
     var currentDay = 0
     var currentWeek = 0
     
+//    var start = 0
+    
+    var dayWeek = 0
+    var thisWeekend = 0
+    var nextWeekend = 0
+    var prevWeekend = 0
+    var firstDayWeek = 0
+    
+    var a = 0
+    var b = 0
+    var c = 0
+    
+    var weekrows = 0
+    
+    func setCurrentweek(){
+        //        let nowday:[String] = dateFormatter.stringFromDate(NSDate.firstDayOfWeek())
+        let nowday = NSDate();
+
+        firstDayWeek = nowday.firstDayOfWeek()!
+        dayWeek = nowday.weekday
+        a = nowday.monthDays
+        b = nowday.weekOfMonth
+        c = nowday.weekOfYear
+
+        print("nowday:\(nowday)")
+        print("firstDayWeek:\(firstDayWeek)")
+        print("DayWeek:\(dayWeek)")
+            print("a:\(a)")
+            print("b:\(b)")
+            print("c:\(c)")
+    }
+
+    
+    //今日の、「年」「月」「日にちをとる」
+    //今日の"yyyy/MM/dd"とって、要素ごとに分割
     func setCurrentDate() {
         let dateFormatter:NSDateFormatter = NSDateFormatter();
         dateFormatter.dateFormat = "yyyy/MM/dd";
@@ -24,7 +61,29 @@ class CalendarManager: NSObject {
         var dates:[String] = dateString.componentsSeparatedByString("/")
         currentYear  = Int(dates[0])!
         currentMonth = Int(dates[1])!
-        currentWeek = Int(dates[2])!
+        currentDay = Int(dates[2])!
+        print("currentYear:\(currentYear)\n currentMonth:\(currentMonth)\n currentDay:\(currentDay)")
+    }
+    
+    class func getStartWeekDay (start: Int) -> Int {
+        let nowday = NSDate();
+        
+        var start = 0
+        start = nowday.firstDayOfWeek()!
+        
+//        dayWeek = nowday.weekday
+//        a = nowday.monthDays
+//        b = nowday.weekOfMonth
+//        c = nowday.weekOfYear
+//        
+//        print("nowday:\(nowday)")
+//        print("firstDayWeek:\(firstDayWeek)")
+//        print("DayWeek:\(dayWeek)")
+//        print("a:\(a)")
+//        print("b:\(b)")
+//        print("c:\(c)")
+
+     return start
     }
     
     //第何週の取得
@@ -35,7 +94,13 @@ class CalendarManager: NSObject {
         if let date = date {
             let calendar = NSCalendar.currentCalendar()
             let dateComp = calendar.components(NSCalendarUnit.Weekday, fromDate: date)
+            
+            let nowday = NSDate();
+            
+            var start = 0
+            start = nowday.firstDayOfWeek()!
             return dateComp.weekday;
+            return start
         }
         return 0
     }
