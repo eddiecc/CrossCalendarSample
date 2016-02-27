@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4FA4EE279ADA9764AA6E5528 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F940F1F487152F2424F7D01 /* Pods.framework */; };
-		ED1C29C31C7D7BAC005BF836 /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C29C21C7D7BAC005BF836 /* CalendarWeekView.swift */; };
-		ED1C29C51C7DD724005BF836 /* CalendarAnotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C29C41C7DD724005BF836 /* CalendarAnotherView.swift */; };
 		ED1C29C71C7F2467005BF836 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C29C61C7F2467005BF836 /* TestViewController.swift */; };
+		EDDE1A571C8042550036A25D /* CalendarAnotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDE1A551C8042550036A25D /* CalendarAnotherView.swift */; };
+		EDDE1A581C8042550036A25D /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDE1A561C8042550036A25D /* CalendarWeekView.swift */; };
 		EFE0F9BF1C772B3300F82B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE0F9BE1C772B3300F82B4D /* AppDelegate.swift */; };
 		EFE0F9C11C772B3300F82B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE0F9C01C772B3300F82B4D /* ViewController.swift */; };
 		EFE0F9C41C772B3300F82B4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE0F9C21C772B3300F82B4D /* Main.storyboard */; };
@@ -45,9 +45,9 @@
 		7F940F1F487152F2424F7D01 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78E1CCAAA8505581AF9292D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DBC390EDE1783BDE811AEEDC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		ED1C29C21C7D7BAC005BF836 /* CalendarWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarWeekView.swift; path = ../CalendarWeekView.swift; sourceTree = "<group>"; };
-		ED1C29C41C7DD724005BF836 /* CalendarAnotherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarAnotherView.swift; sourceTree = "<group>"; };
 		ED1C29C61C7F2467005BF836 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		EDDE1A551C8042550036A25D /* CalendarAnotherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarAnotherView.swift; path = Calendar/CalendarAnotherView.swift; sourceTree = "<group>"; };
+		EDDE1A561C8042550036A25D /* CalendarWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarWeekView.swift; path = Calendar/CalendarWeekView.swift; sourceTree = "<group>"; };
 		EFE0F9BB1C772B3300F82B4D /* CrossCalendarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossCalendarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE0F9BE1C772B3300F82B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFE0F9C01C772B3300F82B4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,10 +162,10 @@
 			children = (
 				EFE0F9F31C772D6000F82B4D /* CalendarManager.swift */,
 				EFE0F9ED1C772CD600F82B4D /* CalendarView.swift */,
-				ED1C29C41C7DD724005BF836 /* CalendarAnotherView.swift */,
+				EDDE1A551C8042550036A25D /* CalendarAnotherView.swift */,
 				EFE0F9EF1C772D0700F82B4D /* CalendarDayView.swift */,
+				EDDE1A561C8042550036A25D /* CalendarWeekView.swift */,
 				EFE0F9F11C772D1500F82B4D /* CalendarMonthView.swift */,
-				ED1C29C21C7D7BAC005BF836 /* CalendarWeekView.swift */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -362,11 +362,11 @@
 			files = (
 				EFE0F9C11C772B3300F82B4D /* ViewController.swift in Sources */,
 				EFE0F9BF1C772B3300F82B4D /* AppDelegate.swift in Sources */,
-				ED1C29C51C7DD724005BF836 /* CalendarAnotherView.swift in Sources */,
-				ED1C29C31C7D7BAC005BF836 /* CalendarWeekView.swift in Sources */,
+				EDDE1A571C8042550036A25D /* CalendarAnotherView.swift in Sources */,
 				EFE0F9EE1C772CD600F82B4D /* CalendarView.swift in Sources */,
 				EFE0F9F41C772D6000F82B4D /* CalendarManager.swift in Sources */,
 				EFE0F9F01C772D0700F82B4D /* CalendarDayView.swift in Sources */,
+				EDDE1A581C8042550036A25D /* CalendarWeekView.swift in Sources */,
 				ED1C29C71C7F2467005BF836 /* TestViewController.swift in Sources */,
 				EFE0F9F21C772D1500F82B4D /* CalendarMonthView.swift in Sources */,
 			);
@@ -470,7 +470,7 @@
 		};
 		EFE0F9E21C772B3400F82B4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B78E1CCAAA8505581AF9292D /* Pods.release.xcconfig */;
+			baseConfigurationReference = DBC390EDE1783BDE811AEEDC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -520,7 +520,7 @@
 		};
 		EFE0F9E51C772B3400F82B4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B78E1CCAAA8505581AF9292D /* Pods.release.xcconfig */;
+			baseConfigurationReference = DBC390EDE1783BDE811AEEDC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CrossCalendarSample/Info.plist;
@@ -545,7 +545,7 @@
 		};
 		EFE0F9E81C772B3400F82B4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B78E1CCAAA8505581AF9292D /* Pods.release.xcconfig */;
+			baseConfigurationReference = DBC390EDE1783BDE811AEEDC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CrossCalendarSampleTests/Info.plist;
@@ -571,7 +571,7 @@
 		};
 		EFE0F9EB1C772B3400F82B4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B78E1CCAAA8505581AF9292D /* Pods.release.xcconfig */;
+			baseConfigurationReference = DBC390EDE1783BDE811AEEDC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CrossCalendarSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

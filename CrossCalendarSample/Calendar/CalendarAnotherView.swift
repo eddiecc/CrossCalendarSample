@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftDate
 
 class CalendarAnotherView : UIView, UIScrollViewDelegate {
     
@@ -15,7 +16,6 @@ class CalendarAnotherView : UIView, UIScrollViewDelegate {
     var currentWeekView: CalendarWeekView!
     var prevWeekView: CalendarWeekView!
     var nextWeekView: CalendarWeekView!
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -28,20 +28,23 @@ class CalendarAnotherView : UIView, UIScrollViewDelegate {
     }
     
     func commonInit(){
+        print("commonInit")
+        
         print(self.frame)
         CalendarManager.sharedInstance.setCurrentDate()
-        CalendarManager.sharedInstance.setCurrentweek()
         horizontalScrollView = UIScrollView(frame: frame)
         
         horizontalScrollView.delegate = self
         
         
         // horizontalにaddする
+        currentWeekView = CalendarWeekView(frame: CGRect(origin:CGPoint (x: CGRectGetWidth(frame), y: 0), size: frame.size), year: CalendarManager.sharedInstance.currentYear, month: CalendarManager.sharedInstance.currentMonth, week: CalendarManager.sharedInstance.currentWeek, day: CalendarManager.sharedInstance.currentDay)
+        
         var ret = CalendarManager.getPrevWeek()
-        currentWeekView = CalendarWeekView(frame: CGRect(origin:CGPoint (x: CGRectGetWidth(frame), y: 0), size: frame.size), year: CalendarManager.sharedInstance.currentYear, month: CalendarManager.sharedInstance.currentMonth, week: CalendarManager.sharedInstance.currentWeek)
-        prevWeekView = CalendarWeekView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: frame.size), year: ret.year, month: ret.month, week: ret.week)
+        prevWeekView = CalendarWeekView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: frame.size), year: ret.year, month: ret.month, week: ret.week, day: ret.day)
+        
         ret = CalendarManager.getNextWeek()
-        nextWeekView = CalendarWeekView(frame: CGRect(origin: CGPoint(x: CGRectGetWidth(frame) * 2, y: 0), size: frame.size), year: ret.year, month: ret.month, week: ret.week)
+        nextWeekView = CalendarWeekView(frame: CGRect(origin: CGPoint(x: CGRectGetWidth(frame) * 2, y: 0), size: frame.size), year: ret.year, month: ret.month, week: ret.week, day: ret.day)
         
         self.addSubview(horizontalScrollView)
         
@@ -77,11 +80,12 @@ class CalendarAnotherView : UIView, UIScrollViewDelegate {
             
         resetWeekView()
         self.resetContentOffSet(horizontalScrollView)
-        print("showNextWeekView")
+        print("showNextWeekView2")
         
         }
         
     func showPrevWeekView () {
+                CalendarManager.sharedInstance.currentWeek--
         CalendarManager.sharedInstance.currentWeek--
         if( CalendarManager.sharedInstance.currentWeek == 0 ){
             CalendarManager.sharedInstance.currentWeek = 5
@@ -95,13 +99,29 @@ class CalendarAnotherView : UIView, UIScrollViewDelegate {
         }
         
     func resetWeekView() {
-        currentWeekView.setUpDays(CalendarManager.sharedInstance.currentYear, month: CalendarManager.sharedInstance.currentMonth, week: CalendarManager.sharedInstance.currentWeek)
+        print("resetWeekView")
+        let nowday = NSDate()
+        let prevSevenday = NSDate() + 7.days
+        let nextSevenday = NSDate() - 7.days
+        let weekrow = nowday.weekOfYear
+        print("weekrow : \(weekrow)")
+        
+        print("prevSevenday : \(prevSevenday)")
+        print("nextSevenday : \(nextSevenday)")
+        
+        let prevStartday = prevSevenday.firstDayOfWeek()
+        let nextStartday = nextSevenday.firstDayOfWeek()
+        print("prevStartday : \(prevStartday)")
+        print("nextStartday : \(nextStartday)")
+
+        
+        currentWeekView.setUpDays(CalendarManager.sharedInstance.currentYear, month: CalendarManager.sharedInstance.currentMonth, week: CalendarManager.sharedInstance.currentWeek, day: CalendarManager.sharedInstance.currentDay)
         
         var ret = CalendarManager.getPrevWeek()
-        prevWeekView.setUpDays(ret.year, month: ret.month, week: ret.week)
+        prevWeekView.setUpDays(ret.year, month: ret.month, week: ret.week, day: ret.day)
         
         ret = CalendarManager.getNextWeek()
-        nextWeekView.setUpDays(ret.year, month: ret.month, week: ret.week)
+        nextWeekView.setUpDays(ret.year, month: ret.month, week: ret.week, day: ret.day)
         
         
     }

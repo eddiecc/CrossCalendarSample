@@ -26,16 +26,11 @@ class CalendarDayView: UIView{
         dayLabel.textColor = UIColor.grayColor()
         
         let nowday = NSDate().day
-        print("\(nowday)")
-        
         if day == nowday{
             dayLabel.textColor = UIColor.blackColor()
-            print("today")
-  
         } else if weekday == 1 {
             //日曜日は赤
             dayLabel.textColor = UIColor.redColor()
-            print("sunday")
         } else if weekday == 7 {
             //土曜日は青
             dayLabel.textColor = UIColor.blueColor()

@@ -13,12 +13,12 @@ class CalendarWeekView: UIView{
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(frame: CGRect, year: Int, month: Int, week: Int) {
+    init(frame: CGRect, year: Int, month: Int, week: Int, day: Int) {
         super.init(frame:frame)
-        setUpDays(year,month:month, week:week)
+        setUpDays(year,month:month, week:week, day:day)
     }
     
-    func setUpDays(year:Int, month:Int, week:Int){
+    func setUpDays(year:Int, month:Int, week:Int, day: Int){
         // 既にセットされてるdayViewの削除
         let subViews:[UIView] = self.subviews as [UIView]
         for view in subViews {
@@ -26,32 +26,24 @@ class CalendarWeekView: UIView{
                 view.removeFromSuperview()
             }
         }
-        
-        let day = CalendarManager.getLastDay(year, month:month);
+
         let daySize = CGSize(width: Int(frame.size.width / 7.0), height: Int(frame.size.width / 7.0))
         
-        let nowday = NSDate();
-        
-        var start = nowday.firstDayOfWeek()!
-        
         //初日の曜日を取得
-        var weekday = CalendarManager.getWeekDay(year, month: month, day: 1)
+        var weekday = CalendarManager.getWeekDay(year, month: month, day: day)
         
-        
-        //        var weekday = CalendarManager.sharedInstance.setCurrentweek()
-        //        print("setUpDays")
-        //        print("\(firstdayweek)")
-//        var start = CalendarManager.getStartWeekDay(start)
-//        print("start \(start)")
+        //今日を含む週の先頭（日曜日）の日にちをゲット
+        let nowday = NSDate();
+        var day = nowday.firstDayOfWeek()!
+        print("day : \(day)")
         
         // dayViewをaddする
-        for var i = 0; i < 7; i++ {
+        for var i = 0; i < 6; i++ {
             let x = (weekday - 1) * Int(daySize.width)
             let y = Int(daySize.height)
             let frame = CGRect(origin: CGPoint(x: x, y: y), size: daySize)
-            
-//            let dayView = CalendarDayView(frame: frame, year: year, month: month, day: i + 1, weekday: weekday)
-            let dayView = CalendarDayView(frame: frame, year: year, month: month, day: start + 1 + i, weekday: weekday)
+
+            let dayView = CalendarDayView(frame: frame, year: year, month: month, day: day + 1 + i, weekday: weekday)
             self.addSubview(dayView)
             weekday++
             if weekday > 7 {
