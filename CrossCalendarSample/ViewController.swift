@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -33,26 +34,12 @@ class ViewController: UIViewController {
         
         if calendarView == nil {
             calendarView = CalendarView(frame: calendarBaseView.bounds)
+            calendarAnotherView = CalendarAnotherView(frame: calendarWeekView.bounds)
             if let calendarView = calendarView {
                 calendarBaseView.addSubview(calendarView)
-        
-//                if weekConstraint == true{
-//                    calendarAnotherView = CalendarAnotherView(frame: calendarWeekView.bounds)
-//                    if let calendarAnotherView = calendarAnotherView {
-//                        calendarWeekView.addSubview(calendarAnotherView)
-                    }
-                }
             }
-//    }
-
-//    override func viewDidLayoutSubviews() {
-//        if calendarAnotherView == nil {
-//            calendarAnotherView = CalendarAnotherView(frame: calendarAnotherView.bounds)
-//            if let calendarAnotherView = calendarAnotherView {
-//                calendarAnotherView.addSubview(calendarAnotherView)
-//            }
-//        }
-//    }
+        }
+    }
 
     
     
@@ -68,6 +55,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func toggle(sender: AnyObject) {
+        if let calendarView = calendarAnotherView {
+            calendarWeekView.addSubview(calendarView)
+        }
         print("toggle", toggleWeek)
         toggleWeek = !toggleWeek
         monthConstraint.priority = toggleWeek ? UILayoutPriorityDefaultLow : UILayoutPriorityDefaultHigh

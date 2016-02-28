@@ -13,6 +13,8 @@ import SwiftDate
 class CalendarManager: NSObject {
     
     static let sharedInstance: CalendarManager = CalendarManager()
+    static var todayDate = NSDate()
+    static var selectedDate: NSDate!
     
     var currentYear = 0
     var currentMonth = 0
@@ -27,15 +29,6 @@ class CalendarManager: NSObject {
     var prevWeekend = 0
     var firstDayWeek = 0
     
-    var prevStartday = 0
-    var nextStartday = 0
-    var startday = 0
-    
-    var a = 0
-    var b = 0
-    var c = 0
-    
-    var weekrows = 0
     
     //今日の、「年」「月」「日にちをとる」
     //今日の"yyyy/MM/dd"とって、要素ごとに分割
@@ -44,13 +37,17 @@ class CalendarManager: NSObject {
         dateFormatter.dateFormat = "yyyy/MM/dd";
         let dateString:String = dateFormatter.stringFromDate(NSDate());
         var dates:[String] = dateString.componentsSeparatedByString("/")
+        let today = NSDate()
+        print("今日", NSDate())
+        CalendarManager.selectedDate = CalendarManager.todayDate
+
         currentYear  = Int(dates[0])!
         currentMonth = Int(dates[1])!
+        currentWeek = today.firstDayOfWeek()!
         currentDay = Int(dates[2])!
-        print("currentYear:\(currentYear)\n currentMonth:\(currentMonth)\n currentDay:\(currentDay)")
     }
     
-    //第何週の取得
+    //曜日の取得
     class func getWeekDay(year:Int, month:Int, day:Int) -> Int {
         let dateFormatter = NSDateFormatter();
         dateFormatter.dateFormat = "yyyy/MM/dd";
@@ -58,11 +55,7 @@ class CalendarManager: NSObject {
         if let date = date {
             let calendar = NSCalendar.currentCalendar()
             let dateComp = calendar.components(NSCalendarUnit.Weekday, fromDate: date)
-            
-            let nowday = NSDate();
-            var start = nowday.firstDayOfWeek()!
             return dateComp.weekday;
-            return start
         }
         return 0
     }
@@ -88,7 +81,7 @@ class CalendarManager: NSObject {
         return 0
     }
     
-    //曜日の取得
+   //曜日の取得
     class func getWeek(year: Int, month: Int, day: Int) -> Int {
         let dateFormatter = NSDateFormatter();
         dateFormatter.dateFormat = "yyyy/MM/dd";
@@ -100,61 +93,7 @@ class CalendarManager: NSObject {
         }
         return 0
     }
-    
-    //先週の初日ゲット
-    class func getMaeWeek(year: Int, month: Int, var day: Int) -> Int {
-        let dateFormatter = NSDateFormatter();
-        dateFormatter.dateFormat = "yyyy/MM/dd";
-        let date = dateFormatter.dateFromString(String(format:"%04d/%02d/%02d", year, month, day));
-        let nowday = NSDate()
-        let prevSevenday = NSDate() - 7.days
-        let weekrow = nowday.weekOfYear
-        print("weekrow : \(weekrow)")
         
-        print("prevSevenday : \(prevSevenday)")
-        
-        let prevStartday = prevSevenday.firstDayOfWeek()
-        day = prevStartday!
-        
-        print("prevStartday : \(prevStartday)")
-        if let date = date {
-            let calendar = NSCalendar.currentCalendar()
-            let dateComp = calendar.components(NSCalendarUnit.WeekOfMonth, fromDate: date)
-            return dateComp.weekOfMonth;
-        }
-        return 0
-        print("getPrevWeekのday: \(day)")
-    }
-    
-    //来週の初日ゲット
-    class func getAtoWeek(year: Int, month: Int, day: Int) -> Int {
-        let dateFormatter = NSDateFormatter();
-        dateFormatter.dateFormat = "yyyy/MM/dd";
-        let date = dateFormatter.dateFromString(String(format:"%04d/%02d/%02d", year, month, day));
-        let nowday = NSDate()
-        let prevSevenday = NSDate() + 7.days
-        let nextSevenday = NSDate() - 7.days
-        let weekrow = nowday.weekOfYear
-        print("weekrow : \(weekrow)")
-        
-        print("prevSevenday : \(prevSevenday)")
-        print("nextSevenday : \(nextSevenday)")
-        
-        let prevStartday = prevSevenday.firstDayOfWeek()
-        let nextStartday = nextSevenday.firstDayOfWeek()
-        print("prevStartday : \(prevStartday)")
-        print("nextStartday : \(nextStartday)")
-        
-        if let date = date {
-            let calendar = NSCalendar.currentCalendar()
-            let dateComp = calendar.components(NSCalendarUnit.WeekOfMonth, fromDate: date)
-            return dateComp.weekOfMonth;
-        }
-        return 0
-    }
-
-
-    
     class func getNextYearAndMonth () -> (year: Int, month: Int){
         var next_year:Int = CalendarManager.sharedInstance.currentYear
         var next_month:Int = CalendarManager.sharedInstance.currentMonth + 1
@@ -177,36 +116,6 @@ class CalendarManager: NSObject {
         return (prev_year,prev_month)
     }
     
-    class func getNextWeek () -> (year: Int, month: Int, week: Int, day: Int){
-        print("getNextWeek")
-        var next_year:Int = CalendarManager.sharedInstance.currentYear
-        var next_month:Int = CalendarManager.sharedInstance.currentMonth
-        var next_week:Int = (NSDate() + 7.days).firstDayOfWeek()!
-//        var next_week:Int = CalendarManager.sharedInstance.currentWeek + 1
-        var next_day:Int = CalendarManager.sharedInstance.currentDay
-        if next_week == 5{
-            next_week = 1
-            next_month++
-            next_year++
-        }
-        return (next_year,next_month,next_week,next_day)
-    }
-    
-    class func getPrevWeek () -> (year: Int, month: Int, week: Int, day: Int){
-        print("getPrevWeek")
-        var prev_year:Int = CalendarManager.sharedInstance.currentYear
-        var prev_month:Int = CalendarManager.sharedInstance.currentMonth
-        var prev_week:Int = CalendarManager.sharedInstance.currentWeek + 1
-        var prev_day:Int = CalendarManager.sharedInstance.currentDay
-
-        if prev_week == 0{
-            prev_week = 5
-            prev_month = 12
-            prev_year--
-        }
-        return (prev_year,prev_month,prev_week,prev_day)
-
-    }
     
     class func getNextYear () -> (year: Int, month: Int){
         return (CalendarManager.sharedInstance.currentYear + 1, CalendarManager.sharedInstance.currentMonth)

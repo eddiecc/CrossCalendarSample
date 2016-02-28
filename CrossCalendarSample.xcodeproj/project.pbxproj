@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4FA4EE279ADA9764AA6E5528 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F940F1F487152F2424F7D01 /* Pods.framework */; };
+		ED0811311C82D26500047E38 /* CalendarSwiftDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0811301C82D26500047E38 /* CalendarSwiftDateView.swift */; };
 		ED1C29C71C7F2467005BF836 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C29C61C7F2467005BF836 /* TestViewController.swift */; };
 		EDDE1A571C8042550036A25D /* CalendarAnotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDE1A551C8042550036A25D /* CalendarAnotherView.swift */; };
 		EDDE1A581C8042550036A25D /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDE1A561C8042550036A25D /* CalendarWeekView.swift */; };
@@ -45,6 +46,7 @@
 		7F940F1F487152F2424F7D01 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78E1CCAAA8505581AF9292D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DBC390EDE1783BDE811AEEDC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		ED0811301C82D26500047E38 /* CalendarSwiftDateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarSwiftDateView.swift; path = Calendar/CalendarSwiftDateView.swift; sourceTree = "<group>"; };
 		ED1C29C61C7F2467005BF836 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		EDDE1A551C8042550036A25D /* CalendarAnotherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarAnotherView.swift; path = Calendar/CalendarAnotherView.swift; sourceTree = "<group>"; };
 		EDDE1A561C8042550036A25D /* CalendarWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarWeekView.swift; path = Calendar/CalendarWeekView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				EFE0F9ED1C772CD600F82B4D /* CalendarView.swift */,
 				EDDE1A551C8042550036A25D /* CalendarAnotherView.swift */,
 				EFE0F9EF1C772D0700F82B4D /* CalendarDayView.swift */,
+				ED0811301C82D26500047E38 /* CalendarSwiftDateView.swift */,
 				EDDE1A561C8042550036A25D /* CalendarWeekView.swift */,
 				EFE0F9F11C772D1500F82B4D /* CalendarMonthView.swift */,
 			);
@@ -366,6 +369,7 @@
 				EFE0F9EE1C772CD600F82B4D /* CalendarView.swift in Sources */,
 				EFE0F9F41C772D6000F82B4D /* CalendarManager.swift in Sources */,
 				EFE0F9F01C772D0700F82B4D /* CalendarDayView.swift in Sources */,
+				ED0811311C82D26500047E38 /* CalendarSwiftDateView.swift in Sources */,
 				EDDE1A581C8042550036A25D /* CalendarWeekView.swift in Sources */,
 				ED1C29C71C7F2467005BF836 /* TestViewController.swift in Sources */,
 				EFE0F9F21C772D1500F82B4D /* CalendarMonthView.swift in Sources */,
